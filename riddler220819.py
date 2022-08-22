@@ -14,11 +14,8 @@ def stateProb(N,nf,maxN):
     b2 = p2 * s2
     b3 = p3 * s3
     print(f'Probability of state N={N},nf={nf} is {100*(b1+b2+b3):.2f}%')
-    print(p1)
     print(f'{100*b1:.2f} from picking 2 full pills')
-    print(p2)
     print(f'{100*b2:.2f} from picking 3 half pills')
-    print(p3)
     print(f'{100*b3:.2f} from picking 1 of each')
     return b1 + b2 + b3
 
@@ -40,4 +37,4 @@ def phh(N,nf):
 def ps(N,nf):
     return 1.0 - (pf(N,nf) + phh(N,nf)) 
 
-print(f'Result = {100 * stateProb(3, 0, 15):.2f}%')
+print(f'Result = {100 * stateProb(0, 0, 15):.2f}%')
